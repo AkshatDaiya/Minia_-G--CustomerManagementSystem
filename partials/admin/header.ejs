@@ -1,0 +1,20 @@
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5><strong>Welcome <%=userName%></strong></h5>
+            </div>
+            <div class="col-md-8">
+                <a href="/logOut"><button class="btn btn-danger">LogOut</button></a>
+                <a href="/profileUpdate"><button class="btn btn-success me-2">Profile Update</button></a>
+                <a href="/profiles"><button class="btn btn-success me-2">All Profiles</button></a>
+                <%if(userName==='admin@gmail.com'){%>
+                    <a href="/admin/dashboard"><button class="btn btn-success me-2">Dashboard</button></a>
+                    <%}%>
+                    
+                <a href="/myBlogs"><button class="btn btn-success me-2">My Blogs</button></a>
+                <a href="/allBlogs"><button class="btn btn-success me-2">All Blogs</button></a>
+            </div>
+        </div>
+    </div>
+</section>

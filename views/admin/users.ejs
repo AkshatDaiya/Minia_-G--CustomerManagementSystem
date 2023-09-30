@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/admin/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../../partials/admin/header.ejs')%>
+
+        <section id="mid">
+            <div class="container">
+                <div class="row">
+                    <%- include('../../partials/admin/left.ejs')%>
+
+                        <div class="col-md-9">
+                            <h2 class="text-center">User's Management</h2>
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Username/Email</th>
+                                    <th>Create Date</th>
+                                    <th>Role</th>
+                                    <th>Email/User status</th>
+                                </tr>
+                                <%record.forEach((result,key)=>{%>
+                                    <tr>
+                                        <td>
+                                            <%=key+1%>
+                                        </td>
+                                        <td>
+                                            <%=result.email%>
+                                        </td>
+                                        <td>
+                                            <%=result.createDate%>
+                                        </td>
+                                        <td>
+                                            <%=result.role%>
+                                        </td>
+                                        <td>
+                                            <a href="/admin/statusUpdate/<%=result.id%>"><button><%=result.status%></button></a>
+                                        </td>
+                                    </tr>
+                                    <%})%>
+                            </table>
+                        </div>
+
+                </div>
+            </div>
+        </section>
+
+        <%- include('../../partials/admin/footer.ejs')%>
+</body>
+
+</html>

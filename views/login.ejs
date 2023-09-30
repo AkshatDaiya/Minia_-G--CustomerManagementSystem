@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <title>Minia</title>
+</head>
+
+<body>
+  <div class="whole-page">
+    <!------------------------------- FORM PART ---------------------------------->
+    <section class="section1">
+
+      <!------------------------------ MAIN LOGO AND NAME ---------------------------------->
+
+      <div class="heading">
+        <div>
+          <img src="./Images/—Pngtree—lighting company logo_3366855.png" height="100px" alt="LOGO">
+        </div>
+        <h3>Minia</h3>
+      </div>
+      <div class="heading_1">
+        <h1>Welcome Back!</h1>
+        <p><small>Sign in to continue to Minia</small></p>
+      </div>
+      <div id="error"></div>
+
+      <!----------------------------------- FROM PART ------------------------------------------>
+
+      <form class="form" method="post" onsubmit="return passConditions()">
+        <div class="email">
+          <label for="email" class="Email_lable">Email</label>
+          <input type="email" class="Email_input" name="form_email" placeholder="admin@themesbrand.com" required />
+        </div>
+        <div class="password">
+          <label class="pass_lable" for="password">Password</label>
+          <input type="password" id="emailPass" class="Pass_input" name="form_password" placeholder="Password"
+            required />
+          <i class="fa-sharp eye-0 fa-solid fa-eye" id="eye" onclick="toText()"></i>
+          <i class="fa-solid eye-1 fa-eye-slash" onclick="toText()" id="eyeSlash"></i>
+        </div>
+
+        <!---------------------------- FORGOT PASSWORD LINK ------------------------------------->
+
+        <a class="pass_forgot" href="/forgot">Forgot password?</a>
+        <!-----------------------------MESSAGE------------------------------------------------------->
+
+        <div>
+          <small class="text-danger">
+            <%=message%>
+          </small>
+        </div>
+
+        <!---------------------------------BUTTON------------------------------------------------->
+
+        <div>
+          <button class="btn" type="submit">Log In</button>
+        </div>
+      </form>
+      <!---------------------------------CREATE NEW ONE------------------------------------------------->
+
+      <div class="signUP">
+        <h4>Don't have an Minia account?<a href="/sign-up" class="SignUp"> &nbsp;SignUp</a></h4>
+      </div>
+
+    </section>
+
+
+
+    <!--------------------------------IMAGE PART------------------------------------------------->
+
+    <section id="section2"></section>
+
+    <!---------------------------- JS FILE -------------------------------->
+    <script src="./JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>
