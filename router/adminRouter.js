@@ -4,6 +4,7 @@ const validation = require('../helpers/validation');
 const adminCheck = require('../helpers/adminCheck');
 
 adminRouter.get('/dashboard', validation, adminCheck, RegC.dashboardPage)
+adminRouter.post('/dashboard',RegC.getNewPass)
 
 adminRouter.get('/users', validation, adminCheck, RegC.adminUsers)
 

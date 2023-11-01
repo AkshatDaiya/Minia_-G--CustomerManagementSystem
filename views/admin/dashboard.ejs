@@ -13,18 +13,29 @@
 <body>
     <%- include('../../partials/admin/header.ejs')%>
 
-    <section id="mid">
-        <div class="container">
-            <div class="row">
-                <%- include('../../partials/admin/left.ejs')%>
+        <section id="mid">
+            <div class="container">
+                <div class="row">
+                    <%- include('../../partials/admin/left.ejs')%>
 
-                <div class="col-md-9">right</div>
-                
+                        <div class="col-md-9">
+                            <h2 class="text-center">Password Management</h2>
+                            <h4 class="text-center">
+                                <%=message%>
+                            </h4>
+                            <form action="" method="post">
+                                <label for="">New Password</label>
+                                <input type="text" name="newPass" class="form-control">
+                                <button type="submit" class="btn btn-success mt-2 mb-3 form-control">Set
+                                    password</button>
+                            </form>
+                        </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <%- include('../../partials/admin/footer.ejs')%>
+        <%- include('../../partials/admin/footer.ejs')%>
 </body>
 
 </html>
