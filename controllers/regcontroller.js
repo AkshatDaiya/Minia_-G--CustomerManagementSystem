@@ -23,7 +23,7 @@ exports.loginDataCatch = async (req, res) => {
                 req.session.role = record.role
                 req.session.inAuth = true
                 if (record.status === 'active') {
-                    if (record.email === 'admin@gmail.com') {
+                    if (record.email === 'cmsproject87@gmail.com') {
                         res.redirect('admin/dashboard')
                     } else {
                         res.redirect('/allBlogs')
@@ -293,7 +293,7 @@ exports.getNewPass = async (req, res) => {
     try {
         const { newPass } = req.body
         const convertPass = await bcrypt.hash(newPass, 10)
-        const record = await Reg.findOne({ email: "admin@gmail.com" })
+        const record = await Reg.findOne({ email: "cmsproject87@gmail.com" })
         const id = record.id
         await Reg.findByIdAndUpdate(id, {
             pass: convertPass
