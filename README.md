@@ -1,2 +1,0 @@
-# Minia_-G--CustomerManagementSystem
- 
